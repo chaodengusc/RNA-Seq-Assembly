@@ -1,3 +1,22 @@
+/*
+ *    The tool is used to assemble RNA-seq data.
+ *
+ *    Author: Chao Deng
+ *
+ *    This program is free software: you can redistribute it and/or modify
+ *    it under the terms of the GNU General Public License as published by
+ *    the Free Software Foundation, either version 3 of the License, or
+ *    (at your option) any later version.
+ *
+ *    This program is distributed in the hope that it will be useful,
+ *    but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *    GNU General Public License for more details.
+ *
+ *    You should have received a copy of the GNU General Public License
+ *    along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
 #include<fstream>
 #include<iostream>
 #include<vector>
@@ -11,24 +30,25 @@
 #include<time.h>
 #include<unistd.h>
 #include<getopt.h>
+
 #define search_range 4
 unsigned int get2bit[] =	//to get each code of character 
 {
-    (1 << 30) + (1 << 31),
-    (1 << 28) + (1 << 29),
-    (1 << 26) + (1 << 27),
-    (1 << 24) + (1 << 25),
-    (1 << 22) + (1 << 23),
-    (1 << 20) + (1 << 21),
-    (1 << 18) + (1 << 19),
-    (1 << 16) + (1 << 17),
+  (1 << 30) + (1 << 31),
+  (1 << 28) + (1 << 29),
+  (1 << 26) + (1 << 27),
+  (1 << 24) + (1 << 25),
+  (1 << 22) + (1 << 23),
+  (1 << 20) + (1 << 21),
+  (1 << 18) + (1 << 19),
+  (1 << 16) + (1 << 17),
 	(1 << 14) + (1 << 15),
 	(1 << 12) + (1 << 13),
 	(1 << 10) + (1 << 11), 
 	(1 << 8) + (1 << 9), 
 	(1 << 6) + (1 << 7),
 	(1 << 4) + (1 << 5),
-   	(1 << 2) + (1 << 3), 
+  (1 << 2) + (1 << 3), 
 	(1 << 0) + (1 << 1),
 };
 
