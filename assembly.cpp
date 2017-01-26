@@ -1,5 +1,5 @@
 /*
- *    The tool is used to assemble RNA-seq data.
+ *    RNA-seq data assembly
  *
  *    Author: Chao Deng
  *
